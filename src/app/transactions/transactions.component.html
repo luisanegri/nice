@@ -1,0 +1,17 @@
+<style>
+  .wrapper {
+    background-color: #0C0F1E;
+    margin: 1rem 0;
+    padding: 1rem;
+    color: #fff;
+    border-radius: 10px;
+  }
+
+</style>
+
+<h1>Transactions</h1>
+<div *ngFor="let transaction of transactions" class="wrapper">
+  <div>description: {{transaction.description}}</div>
+  <div>amount: {{transaction.amount}}</div>
+  <div>amount: {{transaction.date}}</div>
+</div>
