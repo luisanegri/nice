@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { ITransactions } from './transactions';
+import { ITransactions } from '../app/transactions';
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
 

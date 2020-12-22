@@ -5,10 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TransactionsComponent } from './transactions/transactions.component';
-import { TransactionsService } from './transactions/transactions.service';
+import { TransactionsService } from './transactions.service';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
-  declarations: [AppComponent, TransactionsComponent],
+  declarations: [AppComponent, TransactionsComponent, AccountComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [TransactionsService],
   bootstrap: [AppComponent],
