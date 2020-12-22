@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TransactionsService } from '../transactions.service';
+import { AccountDataService } from '../account-data.service';
 
 @Component({
   selector: 'app-account',
@@ -9,10 +9,10 @@ import { TransactionsService } from '../transactions.service';
 export class AccountComponent implements OnInit {
   public account: object[] = [];
   public currency: any;
-  constructor(private _transactionsService: TransactionsService) {}
+  constructor(private _AccountDataService: AccountDataService) {}
 
   ngOnInit(): void {
-    this._transactionsService.getTransactions().subscribe((data: any) => {
+    this._AccountDataService.getAccountData().subscribe((data: any) => {
       const account = data.account;
       const currency = data.currency;
       this.account = account;

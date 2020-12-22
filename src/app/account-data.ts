@@ -1,4 +1,4 @@
-export interface ITransactions {
+export interface IAccountData {
   currency: string;
   account: Object;
   transactions: [];

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TransactionsService } from '../transactions.service';
+import { AccountDataService } from '../account-data.service';
 
 @Component({
   selector: 'app-transactions',
@@ -7,11 +7,11 @@ import { TransactionsService } from '../transactions.service';
   styleUrls: ['./transactions.component.scss'],
 })
 export class TransactionsComponent implements OnInit {
-  public transactions: object[] = [];
-  constructor(private _transactionsService: TransactionsService) {}
+  public transactions: Object[] = [];
+  constructor(private _AccountDataService: AccountDataService) {}
 
   ngOnInit(): void {
-    this._transactionsService.getTransactions().subscribe((data: any) => {
+    this._AccountDataService.getAccountData().subscribe((data: any) => {
       const transactions = data.transactions.map(
         (transaction: any) => transaction
       );
