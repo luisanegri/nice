@@ -1,5 +1,5 @@
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 
   * {
     box-sizing: border-box;
@@ -10,7 +10,7 @@
   html,
   body,
   #root {
-    height: 100%
+    height: 100%;
   }
 
   *,
@@ -18,14 +18,17 @@
   input {
     border: 0;
     outline: 0;
-    font-family: 'Barlow', sans-serif;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .container {
+    width: 900px;
+    margin: 0 auto;
   }
 
 </style>
 
-<div>
-  <h1>My Account</h1>
+<div class="container">
   <app-account></app-account>
   <app-transactions></app-transactions>
-
 </div>
