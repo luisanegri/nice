@@ -26,25 +26,25 @@
         },
         {
             "to": "Coffee and Cakes",
-            "description": "468832.99",
+            "description": "Food",
             "amount": 2.50,
             "date": "2016-01-08T08:14:00.000Z"
         },
         {
             "to": "Albert Heijn",
-            "description": "489923982.45",
+            "description": "Groceries",
             "amount": 76.65,
             "date": "2016-01-07T19:30:00.000Z"
         },
         {
             "to": "Shoes and Jackets",
-            "description": "567222.67",
+            "description": "Shopping",
             "amount": 89.00,
             "date": "2016-01-07T18:29:00.000Z"
         },
         {
             "to": "NS Railways",
-            "description": "89357483.76",
+            "description": "Transport",
             "amount": 12.20,
             "date": "2016-01-07T10:45:00.000Z"
         }

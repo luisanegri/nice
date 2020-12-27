@@ -1,17 +1,83 @@
 <style>
-  .wrapper {
-    background-color: #0C0F1E;
+  .transactions__list {
+    background-color: #1f2742;
     margin: 1rem 0;
     padding: 1rem;
     color: #fff;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    margin: 10px auto;
+  }
+
+  .transactions__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+  }
+
+  .transactions__column span {
+    margin-bottom: .3rem;
+  }
+
+  .transactions__date {
+    font-size: .8rem;
+  }
+
+  .transactions__description {
+    font-weight: 700;
+    letter-spacing: .1rem;
+  }
+
+  .transactions__tagTo,
+  .transactions__tagFrom {
+    position: absolute;
+    left: 0;
+    width: 5px;
+    height: 60%;
+  }
+
+  .transactions__tagTo {
+    background-color: #F49390;
+  }
+
+  .transactions__tagFrom {
+    background-color: #ADFFF0;
   }
 
 </style>
 
-<h1>Transactions</h1>
-<div *ngFor="let transaction of transactions" class="wrapper">
-  <div>description: {{transaction.description}}</div>
-  <div>amount: {{transaction.amount}}</div>
-  <div>amount: {{transaction.date}}</div>
+<h2>Transactions</h2>
+<div *ngFor="let transaction of transactions" class="transactions">
+  <div *ngIf="transaction.to">
+    <div class="transactions__list">
+      <span class="transactions__tagTo"></span>
+      <div class="transactions__column">
+        <span class="transactions__description">{{transaction.description}}</span>
+        <span>{{transaction.to}}</span>
+      </div>
+      <div class="transactions__column">
+        <span class="transactions__date">{{transaction.date}}</span>
+        <span>€{{transaction.amount}}</span>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="transaction.from">
+    <div class="transactions__list">
+      <span class="transactions__tagFrom"></span>
+      <div class="transactions__column">
+        <span class="transactions__description">{{transaction.description}}</span>
+        <span>{{transaction.from}}</span>
+      </div>
+      <div class="transactions__column">
+        <span class="transactions__date">{{transaction.date}}</span>
+        <span>€{{transaction.amount}}</span>
+      </div>
+    </div>
+  </div>
 </div>
