@@ -1,5 +1,17 @@
 export interface IAccountData {
   currency: string;
-  account: Object;
-  transactions: Object[];
+  account: IAccount;
+  transactions: ITransactions[];
+}
+
+interface ITransactions {
+  date: string;
+  amount: number;
+  description: string;
+}
+
+interface IAccount {
+  name: string;
+  iban: string;
+  balance: number;
 }
