@@ -24,9 +24,12 @@ export class AccountDataService {
     return this.http.get<IAccountData>(this.url).pipe(
       tap(() => console.log('HTTP request executed')),
       catchError(this.handleError),
+      // The shareReplay prevents additional subscribers to the returned observable triggering
+      // a new response, but you're creating a new one each time
       shareReplay(),
       retryWhen((errors) => {
         return errors.pipe(
+          // determine a delay each time that there's an error
           delayWhen(() => timer(2000)),
           tap(() => console.log('retrying...'))
         );

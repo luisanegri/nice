@@ -9,7 +9,7 @@ import { AccountDataService } from '../account-data.service';
 })
 export class AccountComponent implements OnInit {
   public account?: IAccount;
-  public currency: any;
+  public currency: string;
   public error: any;
 
   constructor(private _AccountDataService: AccountDataService) {}

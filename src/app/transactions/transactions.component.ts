@@ -10,7 +10,7 @@ import dateFormatter from './dateFormatter';
 })
 export class TransactionsComponent implements OnInit {
   public transactions?: ITransactions[];
-  public currency: any;
+  public currency: string;
   public error: any;
 
   constructor(private _AccountDataService: AccountDataService) {}
