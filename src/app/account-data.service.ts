@@ -1,5 +1,9 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { IAccountData } from './account-data';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpHeaders,
+} from '@angular/common/http';
+import { IAccountData, ITransactions } from './account-data';
 import { Observable, throwError, timer } from 'rxjs';
 import { Injectable } from '@angular/core';
 import {

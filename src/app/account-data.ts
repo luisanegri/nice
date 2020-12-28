@@ -4,14 +4,16 @@ export interface IAccountData {
   transactions: ITransactions[];
 }
 
-interface ITransactions {
-  date: string;
+export interface ITransactions {
+  date?: string;
   amount: number;
   description: string;
+  from?: string;
+  to?: string;
 }
 
-interface IAccount {
-  name: string;
-  iban: string;
-  balance: number;
+export interface IAccount {
+  name?: string;
+  iban?: string;
+  balance?: number;
 }

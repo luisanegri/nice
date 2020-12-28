@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ITransactions } from '../account-data';
 import { AccountDataService } from '../account-data.service';
 import dateFormatter from './dateFormatter';
 
@@ -8,7 +9,7 @@ import dateFormatter from './dateFormatter';
   styleUrls: ['./transactions.component.scss'],
 })
 export class TransactionsComponent implements OnInit {
-  public transactions: Object[] = [];
+  public transactions?: ITransactions[];
   public currency: any;
   public error: any;
 
